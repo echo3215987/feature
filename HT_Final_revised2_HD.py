@@ -597,7 +597,8 @@ if __name__ == '__main__':
   today = datetime.datetime.now()
   #Path_year = today.strftime("%Y")
   #Path_month = today.strftime("%m")
-  Path_by_day = tody.strftime("%Y%m")
+  Path_by_day = today\
+      .strftime("%Y%m")
   Result_Path = './' + Path_by_day +'/'	#refactory by HD
   if not os.path.isdir(Result_Path):
       os.makedirs(Result_Path)
@@ -1822,11 +1823,12 @@ if __name__ == '__main__':
   result = result.rename(columns={'index':'VIN'})
   result.to_csv(Temp_Path+"Feature_SRLFOWM.csv", index=False,  sep=',', encoding='utf-8')
   write_Log(Log_File,"ok\n")
-
+  END_DATE
   del result
   df_SRLFOWM = None
 
-  write_Log(Log_File,"21. %s | Features construction from cdp.SRMINVO......"%str(datetime.datetime.now()))  
+  write_Log(Log_File
+            ,"21. %s | Features construction from cdp.SRMINVO......"%str(datetime.datetime.now()))
   #INVODT
   # df_allSRMINVO = getSRMINVO_query_data('c.INVODT, c.DLRCD, c.BRNHCD, c.INVONO, c.INVTXCD, c.TOTAMT, c.INSURCD, c.IRNAMT, c.WSHAMT')
   df_allSRMINVO = getSRMINVO_query_data()
@@ -2734,7 +2736,7 @@ if __name__ == '__main__':
 
   aa = df_LICSNO0717_Features_D.copy()
   aa['LICSNO'] = df_LICSNO0717_Features['LICSNO']
-  aa.to_csv(Result_Path+"Big_Table_Original.csv",  sep=',', index=False, encoding='utf-8')
+  aa.to_csv(Result_Path+"Big_Table_Original.csv",  getSRMINVO_query_datasep=',', index=False, encoding='utf-8')
   aa.to_sql("md_Big_Table_Original", con = engine, if_exists='replace', index = False)
   del aa
   gc.collect()
