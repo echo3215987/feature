@@ -1968,7 +1968,7 @@ if __name__ == '__main__':
         .master("local") \
         .config("spark.cassandra.connection.host", "10.201.2.130,10.201.2.131,10.201.2.132") \
         .config("spark.cassandra.connection.port", "9042") \
-        .config("spark.jars.packages", "com.datastax.spark:spark-cassandra-connector_2.11:2.3.2") \
+        .config("spark.jars.packages", "com.datastax.spark:spark-cassandra-connector_2.11:2.1.0") \
         .getOrCreate()
 
     FIX_DATE = datetime.datetime.strptime('1988-01-01', "%Y-%m-%d")
@@ -2123,7 +2123,7 @@ if __name__ == '__main__':
                                                "SRMINVO_TOTAMT_sum_3year")
 
     ##save csv
-    result_SRMINVO.coalesce(1).write.option('header', 'true').csv("C:/Users/foxconn/Desktop/Feature_SRMINVO.csv")
+    result_SRMINVO.coalesce(1).write.option('header', 'true').csv(Temp_Path+"Feature_SRMINVO.csv")
 
     df_allSRMINVO = None
     write_Log(Log_File, "ok\n")
