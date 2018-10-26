@@ -27,7 +27,11 @@ from bokeh.layouts import row
 from sklearn.preprocessing import MinMaxScaler
 import urllib  # import for writing data to RDB
 from sqlalchemy import create_engine  # import for writing data to RDB
-
+#pyspark
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+from pyspark.sql.types import TimestampType, IntegerType, StringType, FloatType
+from pyspark.sql.window import Window
 
 # plt.style.use('ggplot')
 # get_ipython().magic('matplotlib inline')
@@ -2125,7 +2129,7 @@ if __name__ == '__main__':
     write_Log(Log_File, "ok\n")
 
     spark.stop()
-    
+
     '''
     write_Log(Log_File
               , "21. %s | Features construction from cdp.SRMINVO......" % str(datetime.datetime.now()))
