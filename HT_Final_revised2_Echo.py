@@ -635,6 +635,7 @@ if __name__ == '__main__':
     Path_by_day = today \
         .strftime("%Y%m")
     Result_Path = './' + Path_by_day + '/'  # refactory by HD
+    '''
     if not os.path.isdir(Result_Path):
         os.makedirs(Result_Path)
     else:
@@ -650,6 +651,7 @@ if __name__ == '__main__':
         command = command % Temp_Path
         os.system(command)  # 全部檔案連同目錄都砍掉	#shutil.rmtree(Temp_Path) by HD
         os.makedirs(Temp_Path)  # 重新建目錄給他
+    '''
     # HT_Result_Path = './Result/' #改寫到RDB，所以這段程式碼不用了
     # if not os.path.isdir(HT_Result_Path):
     #     os.makedirs(HT_Result_Path)
@@ -659,8 +661,10 @@ if __name__ == '__main__':
     #     os.system(command) #全部檔案連同目錄都砍掉
     #     os.makedirs(HT_Result_Path)#重新建目錄給他
     Log_Path = './Log/'
+    '''
     if not os.path.isdir(Log_Path):
         os.makedirs(Log_Path)
+    '''
     Log_File = Log_Path + 'Log_' + Path_by_day + '.txt'  # refactory by HD
     Import_Data_Path = './Import_Data/'
 
@@ -1966,9 +1970,9 @@ if __name__ == '__main__':
 
     spark = SparkSession.builder.appName("21.Features-construction-from-cdp.SRMINVO") \
         .master("local") \
+        .config("", sparkConf) \
         .config("spark.cassandra.connection.host", "10.201.2.130,10.201.2.131,10.201.2.132") \
         .config("spark.cassandra.connection.port", "9042") \
-        .config("spark.jars.packages", "com.datastax.spark:spark-cassandra-connector_2.11:2.1.0") \
         .getOrCreate()
 
     FIX_DATE = datetime.datetime.strptime('1988-01-01', "%Y-%m-%d")
