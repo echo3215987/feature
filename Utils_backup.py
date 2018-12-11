@@ -27,14 +27,12 @@ from sqlalchemy import create_engine #import for writing data to RDB
 #plt.style.use('ggplot')
 #get_ipython().magic('matplotlib inline')
 
-from main import main
-
 # In[3]:
+
 def write_Log(Log_File, Log_Str):
     Log = open(Log_File, 'a')
     Log.write(Log_Str)
     Log.close()
-
 
 # In[5]:
 # Define Function
@@ -85,8 +83,8 @@ def IS_calculator_dask(df_input, groupby_column, cal_column_name):
     result = data.groupby(groupby_column)[cal_column_name].agg(agg_methods)
     result['range'] = result['max'] - result['min']
     result['range'] = result['range'].map(lambda x: None if pd.isnull(x) else x.days)
-    result['min'] = (pd.Timestamp(main.END_DATE) - result['min']).map(lambda x: None if pd.isnull(x) else x.days)
-    result['max'] = (pd.Timestamp(main.END_DATE) - result['max']).map(lambda x: None if pd.isnull(x) else x.days)
+    result['min'] = (pd.Timestamp(END_DATE) - result['min']).map(lambda x: None if pd.isnull(x) else x.days)
+    result['max'] = (pd.Timestamp(END_DATE) - result['max']).map(lambda x: None if pd.isnull(x) else x.days)
     df_result = result.compute()  # backto PANDAS
     df_result.columns = [cal_column_name + '_min', cal_column_name + '_max', cal_column_name + '_count',
                          cal_column_name + '_range']
@@ -106,7 +104,7 @@ def dataframe_quick_look(df_input):
     df_feature_desc[u'cate>20'] = df_feature_desc[u'value_counts'].map(lambda x: True if x > 20 else False)
     return df_feature_desc
 
-
+'''
 # In[6]:
 # define class， for mutithread run SQL select
 class DatabaseWorker(Thread):
@@ -127,13 +125,13 @@ class DatabaseWorker(Thread):
         except:
             print("Error..")
         self.result_queue.append(result)
-        self.return_index = len(main.result_queue) - 1
+        self.return_index = len(result_queue) - 1
 
 
 #         print(len(result_queue)-1)
 #         print (self.query)
 #         return(len(result_queue)-1)
-
+'''
 # In[7]:
 # SQL code
 def SQL_df_CRCAMF():

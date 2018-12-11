@@ -796,6 +796,10 @@ if __name__ == '__main__':
   list_HIST = ['BODYNO','BDNOM']
   list_CRCAMF = ['BDNO']
 
+  df_SSHSCHISTORY.to_csv(Temp_Path + "df_SSHSCHISTORY.csv", sep=',', encoding='utf-8')
+  df_CRCAMF.to_csv(Temp_Path + "df_CRCAMF.csv", sep=',', encoding='utf-8')
+  df_CRCAMF_web_query20150708.to_csv(Temp_Path + "df_CRCAMF_web_query20150708.csv", sep=',', encoding='utf-8')
+
   #交叉比對 也比對車名
   for indexHIST in list_HIST:
       for indexCRCAMF in list_CRCAMF:
@@ -1211,6 +1215,7 @@ if __name__ == '__main__':
   df_CRAURF_all[df_CRAURF_all.qualified=='1'].drop_duplicates('LICSNO', keep='first').to_csv(Temp_Path+"df_CRAUR.csv", index=False,  sep=',', encoding='utf-8')
   del df_CRAURF_all
   write_Log(Log_File,"ok\n")
+#TODO
   # Code 3: 20FIRST_table_combining
   #符合條件的車
   #  df_CRCAMF704969_0810  把候選名單加入

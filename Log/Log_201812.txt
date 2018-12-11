@@ -1,0 +1,154 @@
+06. 2018-12-03 14:10:11.419200 | HT's cars selection......06. 2018-12-03 14:11:56.526200 | HT's cars selection......ok
+07. 2018-12-03 14:12:08.270200 | Remove scrapped car from web query......ok
+08. 2018-12-03 14:12:08.512200 | Remove stolen cars......ok
+09. 2018-12-03 14:12:08.687200 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-03 14:12:09.524200 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-03 14:12:10.438200 | Clearn df_CRCAMF......02. 2018-12-04 09:53:40.837801 | Select data from cdp.CRCAMF......ok
+03. 2018-12-04 09:53:46.037801 | Clean the df_CRCAMF......ok
+04. 2018-12-04 09:53:53.346801 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-04 09:53:53.655801 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-04 09:54:44.167801 | Select data from cdp.CRCAMF......ok
+03. 2018-12-04 09:54:46.494801 | Clean the df_CRCAMF......ok
+04. 2018-12-04 09:54:50.922801 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-04 09:54:51.208801 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-05 09:41:15.655401 | Select data from cdp.CRCAMF......ok
+03. 2018-12-05 09:41:20.193401 | Clean the df_CRCAMF......ok
+04. 2018-12-05 09:41:30.403401 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-05 09:41:30.505401 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-05 09:50:06.480401 | Select data from cdp.CRCAMF......ok
+03. 2018-12-05 09:50:08.833401 | Clean the df_CRCAMF......ok
+04. 2018-12-05 09:50:14.749401 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-05 09:50:14.844401 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 08:42:40.379400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 08:42:45.261400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 08:42:54.655400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 08:42:54.781400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 09:11:21.060400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 09:11:23.432400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 09:11:29.534400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 09:11:29.632400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 10:08:58.492400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 10:09:00.797400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 10:09:07.138400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 10:09:07.247400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 10:15:00.204400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 10:15:02.552400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 10:15:08.678400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 10:15:08.778400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 10:17:17.641400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 10:17:19.960400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 10:17:26.010400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 10:17:26.109400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 10:48:06.573400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 10:48:08.769400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 10:48:14.873400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 10:48:14.966400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 10:48:58.846400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 10:49:01.688400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 10:49:07.422400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 10:49:07.512400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 14:34:59.248400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 14:35:01.882400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 14:35:08.779400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 14:35:08.878400 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-07 16:58:19.712400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 16:58:22.158400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 16:58:38.505400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 16:58:38.750400 | Clean the df_SSHSCHISTORY......ok
+06. 2018-12-07 17:04:19.269400 | HT's cars selection......ok
+07. 2018-12-07 17:04:19.536400 | Remove scrapped car from web query......ok
+08. 2018-12-07 17:04:19.644400 | Remove stolen cars......ok
+09. 2018-12-07 17:04:19.742400 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-07 17:04:20.037400 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-07 17:04:20.338400 | Clearn df_CRCAMF......02. 2018-12-07 17:53:21.854400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 17:53:24.186400 | Clean the df_CRCAMF......02. 2018-12-07 17:59:07.273400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 17:59:09.742400 | Clean the df_CRCAMF......02. 2018-12-07 18:02:13.528400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 18:02:15.964400 | Clean the df_CRCAMF......02. 2018-12-07 18:06:07.878400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 18:06:10.424400 | Clean the df_CRCAMF......02. 2018-12-07 18:06:39.930400 | Select data from cdp.CRCAMF......ok
+03. 2018-12-07 18:06:42.375400 | Clean the df_CRCAMF......ok
+04. 2018-12-07 18:06:54.618400 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-07 18:06:54.841400 | Clean the df_SSHSCHISTORY......ok
+06. 2018-12-07 18:12:34.797400 | HT's cars selection......ok
+07. 2018-12-07 18:12:34.972400 | Remove scrapped car from web query......ok
+08. 2018-12-07 18:12:35.086400 | Remove stolen cars......ok
+09. 2018-12-07 18:12:35.183400 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-07 18:12:35.356400 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-07 18:12:35.673400 | Clearn df_CRCAMF......02. 2018-12-10 08:45:34.113000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 08:45:36.850000 | Clean the df_CRCAMF......02. 2018-12-10 08:50:48.088000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 08:50:50.326000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 08:51:02.410000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 08:51:02.616000 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-10 08:59:44.899000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 08:59:47.201000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 08:59:59.085000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 08:59:59.336000 | Clean the df_SSHSCHISTORY......ok
+06. 2018-12-10 09:06:42.698000 | HT's cars selection......ok
+07. 2018-12-10 09:06:47.308000 | Remove scrapped car from web query......ok
+08. 2018-12-10 09:06:47.504000 | Remove stolen cars......ok
+09. 2018-12-10 09:06:47.697000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 09:06:48.049000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 09:06:48.477000 | Clearn df_CRCAMF......ok
+12. 2018-12-10 09:07:05.691000 | Clearn df_SSHUCHISTORY......ok
+06. 2018-12-10 09:14:18.651000 | HT's cars selection......ok
+07. 2018-12-10 09:14:23.249000 | Remove scrapped car from web query......ok
+08. 2018-12-10 09:14:23.435000 | Remove stolen cars......ok
+09. 2018-12-10 09:14:23.571000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 09:14:23.926000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 09:14:24.344000 | Clearn df_CRCAMF......ok
+12. 2018-12-10 09:14:41.243000 | Clearn df_SSHUCHISTORY......ok
+06. 2018-12-10 11:57:55.501000 | HT's cars selection......ok
+07. 2018-12-10 11:58:00.218000 | Remove scrapped car from web query......ok
+08. 2018-12-10 11:58:00.433000 | Remove stolen cars......ok
+09. 2018-12-10 11:58:02.557000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 11:58:02.956000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 11:58:03.352000 | Clearn df_CRCAMF......06. 2018-12-10 12:02:57.124000 | HT's cars selection......ok
+07. 2018-12-10 12:03:01.776000 | Remove scrapped car from web query......ok
+08. 2018-12-10 12:03:01.983000 | Remove stolen cars......ok
+09. 2018-12-10 12:03:04.069000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 12:03:04.410000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 12:03:04.803000 | Clearn df_CRCAMF......06. 2018-12-10 12:04:14.112000 | HT's cars selection......ok
+07. 2018-12-10 12:04:18.813000 | Remove scrapped car from web query......ok
+08. 2018-12-10 12:04:19.030000 | Remove stolen cars......ok
+09. 2018-12-10 12:04:21.343000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 12:04:21.748000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 12:04:22.148000 | Clearn df_CRCAMF......06. 2018-12-10 12:05:29.577000 | HT's cars selection......ok
+07. 2018-12-10 12:05:34.175000 | Remove scrapped car from web query......ok
+08. 2018-12-10 12:05:34.392000 | Remove stolen cars......ok
+09. 2018-12-10 12:05:36.410000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 12:05:36.777000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 12:05:37.200000 | Clearn df_CRCAMF......ok
+12. 2018-12-10 12:06:30.765000 | Clearn df_SSHUCHISTORY......ok
+06. 2018-12-10 13:40:18.761000 | HT's cars selection......ok
+07. 2018-12-10 13:40:23.376000 | Remove scrapped car from web query......ok
+08. 2018-12-10 13:40:23.595000 | Remove stolen cars......ok
+09. 2018-12-10 13:40:25.630000 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-10 13:40:25.971000 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-10 13:40:26.379000 | Clearn df_CRCAMF......ok
+12. 2018-12-10 13:41:18.917000 | Clearn df_SSHUCHISTORY......ok
+06. 2018-12-10 16:10:18.178000 | HT's cars selection......ok
+07. 2018-12-10 16:10:22.845000 | Remove scrapped car from web query......ok
+08. 2018-12-10 16:10:23.078000 | Remove stolen cars......ok
+02. 2018-12-10 16:50:51.993000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 16:50:54.341000 | Clean the df_CRCAMF......02. 2018-12-10 16:51:33.070000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 16:51:35.289000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 16:51:41.706000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 16:51:41.803000 | Clean the df_SSHSCHISTORY......02. 2018-12-10 16:52:25.315000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 16:52:27.482000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 16:52:33.549000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 16:52:33.647000 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-10 16:57:18.469000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 16:57:20.742000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 16:57:26.983000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 16:57:27.083000 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-10 17:05:39.824000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 17:05:42.004000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 17:05:48.083000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 17:05:48.179000 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-10 17:09:09.339000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 17:09:11.860000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 17:09:17.780000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 17:09:17.879000 | Clean the df_SSHSCHISTORY......ok
+02. 2018-12-10 17:27:20.010000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-10 17:27:22.275000 | Clean the df_CRCAMF......ok
+04. 2018-12-10 17:27:28.616000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-10 17:27:28.723000 | Clean the df_SSHSCHISTORY......ok

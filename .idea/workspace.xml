@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61996380-59f2-4d41-b54e-90f65523d698" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils_backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Constant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selected_Licsno1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selected_Licsno2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selected_Licsno2_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selected_Licsno2_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SparkUDF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT_Final_revised2_Echo.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT_Final_revised2_Echo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT_Final_revised2_Echo_spark.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRMINVO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ttt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HT_Final_revised2_HD.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT_Final_revised2_HD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRMINVO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRMINVO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils_backup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,37 +27,58 @@
     <session id="-177857980">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.160" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.34" value="2" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.54" value="2" />
+          <entry key="project.open.time.58" value="2" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.86" value="1" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="31" />
+          <entry key="py" value="63" />
           <entry key="ttt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="33" />
+          <entry key="Python" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4703" />
+          <entry key="Python Console" value="64" />
+          <entry key="dummy" value="14" />
+          <entry key="py" value="15412" />
+          <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4703" />
+          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="Python" value="15476" />
         </counts>
       </usages-collector>
     </session>
@@ -57,12 +86,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HT_Final_revised2_Echo.py">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1013">
-              <caret line="631" column="35" lean-forward="true" selection-start-line="631" selection-start-column="35" selection-end-line="631" selection-end-column="35" />
+            <state relative-caret-position="4826">
+              <caret line="260" column="43" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
               <folding>
-                <element signature="e#26#45#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1544429410467" expanded="true" signature="242:244" ph="..." />
+                <marker date="1544429410467" expanded="true" signature="242:248" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno2_1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4142">
+              <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno2_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1786">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-532">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,46 +135,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+            <state relative-caret-position="798">
+              <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1541044310188" expanded="true" signature="1987:2040" ph="..." />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Utils.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="139" column="29" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="29" />
+            <state relative-caret-position="437">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+                <marker date="1544164572546" expanded="true" signature="124:1007" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils_Function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17841">
+              <caret line="971" column="62" selection-start-line="971" selection-start-column="62" selection-end-line="971" selection-end-column="62" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <marker date="1544177159453" expanded="true" signature="1516:1885" ph="..." />
+                <marker date="1544177159453" expanded="true" signature="2599:2600" ph="..." />
+                <marker date="1544177159453" expanded="true" signature="39851:41944" ph="..." />
+                <marker date="1544177159453" expanded="true" signature="44025:44470" ph="..." />
+                <marker date="1544177159453" expanded="true" signature="44502:44796" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils_backup.py">
+        <entry file="file://$PROJECT_DIR$/SparkUDF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SRMINVO.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="84" column="47" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="47" />
+            <state relative-caret-position="190">
+              <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1541042851112" expanded="true" signature="370:418" ph="..." />
-                <marker date="1541042851112" expanded="true" signature="4482:15056" ph="..." />
               </folding>
             </state>
           </provider>
@@ -119,10 +189,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HT_Final_revised2_HD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="660" lean-forward="true" selection-start-line="660" selection-end-line="660" />
+            <state relative-caret-position="14706">
+              <caret line="799" column="11" selection-start-line="799" selection-start-column="2" selection-end-line="799" selection-end-column="11" />
               <folding>
                 <element signature="e#27#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno1_1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,36 +221,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Log_FileLog_File</find>
-      <find>Java gateway process exited before sending its port number</find>
-      <find>END_DATE</find>
-      <find>result_INVODT_max</find>
-      <find>today</find>
-      <find>VIN</find>
-      <find>tody</find>
-      <find>result_SRMINVO_DLRCD_maxoccu</find>
-      <find>DATE_3y</find>
-      <find>INVODT</find>
-      <find>INVONO  *免費  #出保固 次數</find>
-      <find>SRMINVO_TOTAMT_mean</find>
-      <find>SRMINVO_INVODT_count</find>
-      <find>Temp_Path</find>
-      <find>SparkSession</find>
-      <find>'''</find>
-      <find>21</find>
-      <find>SRMINVO_INSURCD_count</find>
-      <find>jars</find>
-      <find>spark</find>
-      <find>sparkSess</find>
-      <find>21.</find>
-      <find>getSRMINVO_query_data</find>
-      <find>write_Log</find>
-      <find>result_queue</find>
-      <find>df_LICSNO0717_Features</find>
-      <find>1.</find>
-      <find>main</find>
-      <find>1. %s</find>
-      <find>Log_File</find>
+      <find>del df_ss</find>
+      <find>aumf</find>
+      <find>show</find>
+      <find>isNull</find>
+      <find>time_cleaner</find>
+      <find>isNotNull</find>
+      <find>20150708</find>
+      <find>leftanti</find>
+      <find>collect</find>
+      <find>LICSNO_upper</find>
+      <find>join</find>
+      <find>DISK_ONLY</find>
+      <find>list_HIST</find>
+      <find>coa</find>
+      <find>df_CRCAMF_web_query20150708</find>
+      <find>CARNM</find>
+      <find>print u'5. 去CARNM出現次數過少者 這邊不去除過少 由報廢去篩選出來'</find>
+      <find>df_CRCAMF_NOTused</find>
+      <find>remove_LICSNO_list</find>
+      <find>df_remove_LICSNO</find>
+      <find>fillna_INT_UDF</find>
+      <find>df_web_query</find>
+      <find>getWeb_query_filter</find>
+      <find>write</find>
+      <find>write.</find>
+      <find>123</find>
+      <find>is_scrapped</find>
+      <find>df_SSHSCHISTORY_clean</find>
+      <find>df_CRCAMF</find>
+      <find>df_SSHSCHISTORY</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,20 +259,36 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HT_Final_revised2_HD.py" />
         <option value="$PROJECT_DIR$/ttt" />
         <option value="$PROJECT_DIR$/HT_Final_revised2_Echo_spark.py" />
         <option value="$PROJECT_DIR$/HT_Final_revised2_Echo.py" />
-        <option value="$PROJECT_DIR$/SRMINVO.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py" />
+        <option value="$PROJECT_DIR$/spark-warehouse/Selected_Licsno.py" />
+        <option value="$PROJECT_DIR$/Log/sparkUDF.py" />
+        <option value="$PROJECT_DIR$/sparkUDF.py" />
         <option value="$PROJECT_DIR$/Utils.py" />
+        <option value="$PROJECT_DIR$/Utils_backup.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno.py" />
+        <option value="$PROJECT_DIR$/SRMINVO.py" />
+        <option value="$PROJECT_DIR$/Constant.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno1-1.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/HT_Final_revised2_HD.py" />
+        <option value="$PROJECT_DIR$/Compare.py" />
+        <option value="$PROJECT_DIR$/Utils_Function.py" />
+        <option value="$PROJECT_DIR$/SparkUDF.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno3.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno2_2.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno2_1.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno2.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno1_1.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="58" />
-    <option name="y" value="8" />
-    <option name="width" value="1873" />
+    <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -223,6 +321,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\foxconn\Desktop\feature" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\foxconn\Desktop\feature" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -236,7 +337,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="HT_Final_revised2_Echo_spark" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="feature" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,8 +359,80 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Selected_Licsno" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="feature" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\foxconn\Desktop\feature\Selected_Licsno1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="feature" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="feature" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.HT_Final_revised2_Echo_spark" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.Selected_Licsno" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.Selected_Licsno" />
         <item itemvalue="Python.HT_Final_revised2_Echo_spark" />
       </list>
     </recent_temporary>
@@ -275,45 +448,98 @@
       <option name="presentableId" value="Default" />
       <updated>1540173641374</updated>
     </task>
+    <task id="LOCAL-00001" summary="git init">
+      <created>1541052329016</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541052329016</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="6" width="1873" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18380743" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15388684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.80116343" weight="0.15401785" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.796404" weight="0.3404018" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7662612" visible="true" weight="0.39285713" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.66790056" weight="0.46316963" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.3236383" weight="0.32924107" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.1988366" side_tool="true" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.2575357" side_tool="true" weight="0.3638393" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.23373877" side_tool="true" visible="true" weight="0.37611607" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49920678" weight="0.32924107" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.6816499" weight="0.32924107" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git init" />
+    <option name="LAST_COMMIT_MESSAGE" value="git init" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="os.path" language="Python" />
         <watch expression="os.path.isfile(conn_info_file)" language="Python" />
+        <watch expression="Path_by_day" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>Path_by_day</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>os.path.isfile(conn_info_file)</expression-string>
         <language-id>Python</language-id>
@@ -369,20 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/sql/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/py4j/protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="327" selection-start-line="327" selection-end-line="327" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/java_gateway.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
@@ -390,69 +602,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ttt">
+    <entry file="file://$PROJECT_DIR$/ttt" />
+    <entry file="file://$PROJECT_DIR$/HT_Final_revised2_Echo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="2127" column="14" lean-forward="true" selection-start-line="1963" selection-start-column="2" selection-end-line="2127" selection-end-column="14" />
+        <state relative-caret-position="435">
+          <caret line="600" column="24" lean-forward="true" selection-start-line="600" selection-start-column="24" selection-end-line="600" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HT_Final_revised2_Echo.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1013">
-          <caret line="631" column="35" lean-forward="true" selection-start-line="631" selection-start-column="35" selection-end-line="631" selection-end-column="35" />
+        <state relative-caret-position="570">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils_backup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/sql/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="292" column="4" selection-start-line="292" selection-start-column="4" selection-end-line="292" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/storagelevel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/py4j/protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="324" column="31" selection-start-line="324" selection-start-column="31" selection-end-line="324" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/sql/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SRMINVO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/sql/dataframe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="1201" selection-start-line="1201" selection-end-line="1201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="31" />
           <folding>
-            <element signature="e#26#45#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4826">
+          <caret line="260" column="43" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1544429410467" expanded="true" signature="242:244" ph="..." />
+            <marker date="1544429410467" expanded="true" signature="242:248" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno2_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4142">
+          <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno2_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1786">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+        <state relative-caret-position="798">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1544164572546" expanded="true" signature="124:1007" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17841">
+          <caret line="971" column="62" selection-start-line="971" selection-start-column="62" selection-end-line="971" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1544177159453" expanded="true" signature="1516:1885" ph="..." />
+            <marker date="1544177159453" expanded="true" signature="2599:2600" ph="..." />
+            <marker date="1544177159453" expanded="true" signature="39851:41944" ph="..." />
+            <marker date="1544177159453" expanded="true" signature="44025:44470" ph="..." />
+            <marker date="1544177159453" expanded="true" signature="44502:44796" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkUDF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1541044310188" expanded="true" signature="1987:2040" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HT_Final_revised2_HD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="660" lean-forward="true" selection-start-line="660" selection-end-line="660" />
+        <state relative-caret-position="14706">
+          <caret line="799" column="11" selection-start-line="799" selection-start-column="2" selection-end-line="799" selection-end-column="11" />
           <folding>
             <element signature="e#27#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SRMINVO.py">
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno1_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="84" column="47" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="47" />
+        <state relative-caret-position="817">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1541042851112" expanded="true" signature="370:418" ph="..." />
-            <marker date="1541042851112" expanded="true" signature="4482:15056" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils_backup.py">
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="139" column="29" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="29" />
+        <state relative-caret-position="-532">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
