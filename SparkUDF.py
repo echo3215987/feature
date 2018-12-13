@@ -29,3 +29,6 @@ lengthReplacementOver_UDF = udf(lambda arr: arr[0] if (arr[0] is not None and le
 
 # 欄位長度大於等於 x 回傳'', 否則回傳該值
 lengthReplacementUnder_UDF = udf(lambda arr: '' if (arr[0] is None or len(arr[0]) >= int(arr[1])) else arr[0])
+
+# 該欄位不是float type也不是none 則去空白
+strip_UDF = udf(lambda value: value if (isinstance(value, float) or value is None) else value.strip())

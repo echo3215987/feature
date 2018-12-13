@@ -12,10 +12,13 @@ def main():
         .getOrCreate()
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    print(dir_path)
+    #print(dir_path)
 
     cwd = os.getcwd()
-    print(cwd)
+    #print(cwd)
+
+    fn = os.path.join(os.path.dirname(__file__), 'Log')
+    print(Log_File)
 
     df = spark.read.option('header', 'true').csv("C:/Users/foxconn/Desktop/tt.csv")
     #df.selectExpr("substring(INSURCD, -10, 10)").show()

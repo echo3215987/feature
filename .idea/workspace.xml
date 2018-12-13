@@ -2,26 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61996380-59f2-4d41-b54e-90f65523d698" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Compare.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Constant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Selected_Licsno1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Selected_Licsno2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Selected_Licsno2_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Selected_Licsno2_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SparkUDF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selected_Licsno3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constant.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HT_Final_revised2_HD.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT_Final_revised2_HD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRMINVO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRMINVO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils_Function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Import_Data/df_web_query_fix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Import_Data/df_web_query_fix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/Log_201812.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log/Log_201812.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selected_Licsno1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selected_Licsno1_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selected_Licsno2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selected_Licsno2_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selected_Licsno2_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selected_Licsno2_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selected_Licsno2_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkUDF.py" beforeDir="false" afterPath="$PROJECT_DIR$/SparkUDF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/_df_CRCAMF_scrapped_after20150708.csv/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/_df_CRCAMF_scrapped_after20150708.csv/.part-00000-6e57d065-5d2d-4afb-b3e2-4a87e5c9c594-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/_df_CRCAMF_scrapped_after20150708.csv/.part-00400-6e57d065-5d2d-4afb-b3e2-4a87e5c9c594-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/_df_CRCAMF_scrapped_after20150708.csv/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/_df_CRCAMF_scrapped_after20150708.csv/part-00000-6e57d065-5d2d-4afb-b3e2-4a87e5c9c594-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/_df_CRCAMF_scrapped_after20150708.csv/part-00400-6e57d065-5d2d-4afb-b3e2-4a87e5c9c594-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00000-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00002-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00013-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00057-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00063-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00081-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/.part-00178-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00000-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00002-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00013-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00057-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00063-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00081-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF.csv/part-00178-a0aca2b7-5be3-46cd-bcd3-92cfee42f844-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_2.csv/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_2.csv/.part-00000-5e0f2165-6e54-4455-a080-4d46ac899cad-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_2.csv/.part-00013-5e0f2165-6e54-4455-a080-4d46ac899cad-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_2.csv/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_2.csv/part-00000-5e0f2165-6e54-4455-a080-4d46ac899cad-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_2.csv/part-00013-5e0f2165-6e54-4455-a080-4d46ac899cad-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00000-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00002-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00013-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00057-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00063-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00080-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00081-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00178-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/.part-00190-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00000-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00002-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00013-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00057-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00063-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00080-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00081-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00178-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_remove_LICSNO.csv/part-00190-59914e1a-0bad-48cc-a2b1-73dc5cd1ffcf-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/.part-00000-6ceec883-9432-40ff-8899-fa6161736977-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/.part-00157-6ceec883-9432-40ff-8899-fa6161736977-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/.part-00362-6ceec883-9432-40ff-8899-fa6161736977-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/.part-00480-6ceec883-9432-40ff-8899-fa6161736977-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/.part-00590-6ceec883-9432-40ff-8899-fa6161736977-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/part-00000-6ceec883-9432-40ff-8899-fa6161736977-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/part-00157-6ceec883-9432-40ff-8899-fa6161736977-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/part-00362-6ceec883-9432-40ff-8899-fa6161736977-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/part-00480-6ceec883-9432-40ff-8899-fa6161736977-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_scrapped_after20150708.csv/part-00590-6ceec883-9432-40ff-8899-fa6161736977-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/.part-00000-977ffde5-b3e7-4576-a453-3daae7702e16-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/.part-00080-977ffde5-b3e7-4576-a453-3daae7702e16-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/.part-00190-977ffde5-b3e7-4576-a453-3daae7702e16-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/part-00000-977ffde5-b3e7-4576-a453-3daae7702e16-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/part-00080-977ffde5-b3e7-4576-a453-3daae7702e16-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_CRCAMF_web_query20150708.csv/part-00190-977ffde5-b3e7-4576-a453-3daae7702e16-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/.part-00000-b97b4de1-b8ef-4514-97c0-634dd57fe5cb-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/.part-00031-b97b4de1-b8ef-4514-97c0-634dd57fe5cb-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/.part-00162-b97b4de1-b8ef-4514-97c0-634dd57fe5cb-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/part-00000-b97b4de1-b8ef-4514-97c0-634dd57fe5cb-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/part-00031-b97b4de1-b8ef-4514-97c0-634dd57fe5cb-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY.csv/part-00162-b97b4de1-b8ef-4514-97c0-634dd57fe5cb-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/.part-00000-965264ab-6b02-488d-b4c8-789e026b3cb3-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/.part-00001-965264ab-6b02-488d-b4c8-789e026b3cb3-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/.part-00002-965264ab-6b02-488d-b4c8-789e026b3cb3-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/part-00000-965264ab-6b02-488d-b4c8-789e026b3cb3-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/part-00001-965264ab-6b02-488d-b4c8-789e026b3cb3-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp_Data/df_SSHSCHISTORY_clean.csv/part-00002-965264ab-6b02-488d-b4c8-789e026b3cb3-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/HT_Final_revised2_HD.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="288">
+                    <caret line="1420" column="72" selection-start-line="1420" selection-start-column="72" selection-end-line="1420" selection-end-column="72" />
+                    <folding>
+                      <element signature="e#27#46#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-177857980">
@@ -31,6 +132,7 @@
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.160" value="1" />
@@ -49,61 +151,63 @@
           <entry key="project.open.time.58" value="2" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.86" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="63" />
+          <entry key="py" value="78" />
           <entry key="ttt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="65" />
+          <entry key="Python" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="64" />
-          <entry key="dummy" value="14" />
-          <entry key="py" value="15412" />
+          <entry key="dummy" value="31" />
+          <entry key="py" value="16194" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="15476" />
+          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="Python" value="16258" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="feature" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selected_Licsno2.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno2_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4826">
-              <caret line="260" column="43" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
+            <state relative-caret-position="228">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1544429410467" expanded="true" signature="242:244" ph="..." />
-                <marker date="1544429410467" expanded="true" signature="242:248" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selected_Licsno2_1.py">
+        <entry file="file://$PROJECT_DIR$/Selected_Licsno3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4142">
-              <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
+            <state relative-caret-position="418">
+              <caret line="27" column="102" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="102" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -114,17 +218,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Selected_Licsno2_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1786">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="57">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Selected_Licsno1.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Constant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-532">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="646">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SparkUDF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="33" column="9" selection-start-line="33" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -135,8 +251,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+            <state relative-caret-position="988">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -145,66 +261,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-                <marker date="1544164572546" expanded="true" signature="124:1007" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils_Function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17841">
-              <caret line="971" column="62" selection-start-line="971" selection-start-column="62" selection-end-line="971" selection-end-column="62" />
+            <state relative-caret-position="1216">
+              <caret line="96" column="30" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1544177159453" expanded="true" signature="1516:1885" ph="..." />
-                <marker date="1544177159453" expanded="true" signature="2599:2600" ph="..." />
-                <marker date="1544177159453" expanded="true" signature="39851:41944" ph="..." />
-                <marker date="1544177159453" expanded="true" signature="44025:44470" ph="..." />
-                <marker date="1544177159453" expanded="true" signature="44502:44796" ph="..." />
+                <marker date="1544606475584" expanded="true" signature="1516:1885" ph="..." />
+                <marker date="1544606475584" expanded="true" signature="2599:2600" ph="..." />
+                <marker date="1544606475584" expanded="true" signature="40099:42192" ph="..." />
+                <marker date="1544606475584" expanded="true" signature="44261:44706" ph="..." />
+                <marker date="1544606475584" expanded="true" signature="44738:45028" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SparkUDF.py">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+            <state relative-caret-position="456">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HT_Final_revised2_HD.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14706">
-              <caret line="799" column="11" selection-start-line="799" selection-start-column="2" selection-end-line="799" selection-end-column="11" />
-              <folding>
-                <element signature="e#27#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selected_Licsno1_1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
+                <marker date="1544585458653" expanded="true" signature="124:1086" ph="..." />
               </folding>
             </state>
           </provider>
@@ -221,17 +301,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>del df_ss</find>
-      <find>aumf</find>
-      <find>show</find>
-      <find>isNull</find>
-      <find>time_cleaner</find>
-      <find>isNotNull</find>
-      <find>20150708</find>
-      <find>leftanti</find>
-      <find>collect</find>
-      <find>LICSNO_upper</find>
-      <find>join</find>
       <find>DISK_ONLY</find>
       <find>list_HIST</find>
       <find>coa</find>
@@ -239,18 +308,29 @@
       <find>CARNM</find>
       <find>print u'5. 去CARNM出現次數過少者 這邊不去除過少 由報廢去篩選出來'</find>
       <find>df_CRCAMF_NOTused</find>
-      <find>remove_LICSNO_list</find>
       <find>df_remove_LICSNO</find>
       <find>fillna_INT_UDF</find>
-      <find>df_web_query</find>
       <find>getWeb_query_filter</find>
       <find>write</find>
       <find>write.</find>
-      <find>123</find>
-      <find>is_scrapped</find>
-      <find>df_SSHSCHISTORY_clean</find>
       <find>df_CRCAMF</find>
       <find>df_SSHSCHISTORY</find>
+      <find>fillna_String_UDF</find>
+      <find>dropDuplicates</find>
+      <find>Log_File</find>
+      <find>CARNM_M</find>
+      <find>remove_LICSNO_list</find>
+      <find>14</find>
+      <find>df_scrapped_20150708</find>
+      <find>14.</find>
+      <find>123</find>
+      <find>df_CRCAMF_used</find>
+      <find>df_CRCAMF.csv</find>
+      <find>anti</find>
+      <find>df_CRCAMF_remove_LICSNO</find>
+      <find>df_SSHSCHISTORY_clean</find>
+      <find>df_web_query</find>
+      <find>is_scrapped</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -270,25 +350,27 @@
         <option value="$PROJECT_DIR$/Utils_backup.py" />
         <option value="$PROJECT_DIR$/Selected_Licsno.py" />
         <option value="$PROJECT_DIR$/SRMINVO.py" />
-        <option value="$PROJECT_DIR$/Constant.py" />
         <option value="$PROJECT_DIR$/Selected_Licsno1-1.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/HT_Final_revised2_HD.py" />
-        <option value="$PROJECT_DIR$/Compare.py" />
-        <option value="$PROJECT_DIR$/Utils_Function.py" />
-        <option value="$PROJECT_DIR$/SparkUDF.py" />
-        <option value="$PROJECT_DIR$/Selected_Licsno3.py" />
-        <option value="$PROJECT_DIR$/Selected_Licsno2_2.py" />
-        <option value="$PROJECT_DIR$/Selected_Licsno2_1.py" />
-        <option value="$PROJECT_DIR$/Selected_Licsno2.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Selected_Licsno1_1.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno2_1.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/Constant.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Selected_Licsno1.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno2.py" />
+        <option value="$PROJECT_DIR$/Compare.py" />
+        <option value="$PROJECT_DIR$/HT_Final_revised2_HD.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno2_2.py" />
+        <option value="$PROJECT_DIR$/SparkUDF.py" />
+        <option value="$PROJECT_DIR$/Utils_Function.py" />
+        <option value="$PROJECT_DIR$/Selected_Licsno3.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="960" />
+    <option name="x" value="-54" />
+    <option name="y" value="22" />
+    <option name="width" value="1628" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -299,6 +381,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,7 +393,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -458,7 +540,7 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -468,22 +550,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15388684" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.1734532" />
+      <window_info id="Structure" order="1" sideWeight="0.50083196" side_tool="true" weight="0.15388684" />
+      <window_info id="Favorites" order="2" sideWeight="0.50083196" side_tool="true" weight="0.15388684" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7662612" visible="true" weight="0.39285713" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7652036" visible="true" weight="0.22209822" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.66790056" weight="0.46316963" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.3236383" weight="0.32924107" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.2575357" side_tool="true" weight="0.3638393" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.23373877" side_tool="true" visible="true" weight="0.37611607" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2347964" side_tool="true" visible="true" weight="0.22209822" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49920678" weight="0.32924107" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.6816499" weight="0.32924107" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -553,13 +635,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/sql/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="188" column="43" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4921">
@@ -638,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/py4j/protocol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -673,32 +741,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Constant.py">
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno1_1.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyspark/sql/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2109">
+          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selected_Licsno2.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/py4j/java_gateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4826">
-          <caret line="260" column="43" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1544429410467" expanded="true" signature="242:244" ph="..." />
-            <marker date="1544429410467" expanded="true" signature="242:248" ph="..." />
-          </folding>
+        <state relative-caret-position="143">
+          <caret line="1285" selection-start-line="1285" selection-end-line="1285" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno1.py" />
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno2.py" />
     <entry file="file://$PROJECT_DIR$/Selected_Licsno2_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4142">
-          <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
+        <state relative-caret-position="228">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selected_Licsno3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="27" column="102" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="102" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -707,83 +780,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Selected_Licsno2_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1786">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="57">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Constant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="646">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1544164572546" expanded="true" signature="124:1007" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils_Function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17841">
-          <caret line="971" column="62" selection-start-line="971" selection-start-column="62" selection-end-line="971" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1544177159453" expanded="true" signature="1516:1885" ph="..." />
-            <marker date="1544177159453" expanded="true" signature="2599:2600" ph="..." />
-            <marker date="1544177159453" expanded="true" signature="39851:41944" ph="..." />
-            <marker date="1544177159453" expanded="true" signature="44025:44470" ph="..." />
-            <marker date="1544177159453" expanded="true" signature="44502:44796" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SparkUDF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+        <state relative-caret-position="570">
+          <caret line="33" column="9" selection-start-line="33" selection-end-line="33" selection-end-column="9" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="96" column="30" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1544606475584" expanded="true" signature="1516:1885" ph="..." />
+            <marker date="1544606475584" expanded="true" signature="2599:2600" ph="..." />
+            <marker date="1544606475584" expanded="true" signature="40099:42192" ph="..." />
+            <marker date="1544606475584" expanded="true" signature="44261:44706" ph="..." />
+            <marker date="1544606475584" expanded="true" signature="44738:45028" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1544585458653" expanded="true" signature="124:1086" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HT_Final_revised2_HD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14706">
-          <caret line="799" column="11" selection-start-line="799" selection-start-column="2" selection-end-line="799" selection-end-column="11" />
+        <state relative-caret-position="288">
+          <caret line="1420" column="72" selection-start-line="1420" selection-start-column="72" selection-end-line="1420" selection-end-column="72" />
           <folding>
             <element signature="e#27#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selected_Licsno1_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selected_Licsno1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-532">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

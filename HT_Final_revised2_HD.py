@@ -749,7 +749,7 @@ if __name__ == '__main__':
   write_Log(Log_File,"05. %s | Clean the df_SSHSCHISTORY......"%str(datetime.datetime.now()))
   # print ('留下15年以上的車輛')# 10612改成留下15年的車子，ISSUE:發照日期
   df_SSHSCHISTORY[u'ISSUE_fix'] =time_cleaner(df_SSHSCHISTORY[u'ISSUE'])
-  df_SSHSCHISTORY = df_SSHSCHISTORY[(df_SSHSCHISTORY[u'ISSUE_fix'] <= datetime.datetime(today.year - Candidate_Car_age,today.month,1,0,0,0,0)) &                      (df_SSHSCHISTORY[u'ISSUE_fix'] >= datetime.datetime(1988,1,1,0,0,0,0)) ]
+  df_SSHSCHISTORY = df_SSHSCHISTORY[(df_SSHSCHISTORY[u'ISSUE_fix'] <= datetime.datetime(today.year - Candidate_Car_age,today.month,1,0,0,0,0)) &(df_SSHSCHISTORY[u'ISSUE_fix'] >= datetime.datetime(1988,1,1,0,0,0,0)) ]
   # print (df_SSHSCHISTORY.shape)
 
   # print ("2015 0708之後報廢的車輛 需要找回")
@@ -1215,7 +1215,7 @@ if __name__ == '__main__':
   df_CRAURF_all[df_CRAURF_all.qualified=='1'].drop_duplicates('LICSNO', keep='first').to_csv(Temp_Path+"df_CRAUR.csv", index=False,  sep=',', encoding='utf-8')
   del df_CRAURF_all
   write_Log(Log_File,"ok\n")
-#TODO
+
   # Code 3: 20FIRST_table_combining
   #符合條件的車
   #  df_CRCAMF704969_0810  把候選名單加入
@@ -1402,7 +1402,7 @@ if __name__ == '__main__':
   del df_combined
   write_Log(Log_File,"ok\n")
 
-
+  # TODO
   # Code 4: 30Features_construction_FOR_FIRST_TABLE
   # LRDT from SR data
   #工單相關日期 特徵抽取

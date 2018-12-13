@@ -94,6 +94,11 @@ def exist_value_replacement(df, columnName, fixedColumnName):
     df = df.drop(columnName).withColumnRenamed(columnName + '_REPLACEMENT', columnName)
     return df
 
+def strip_string_exclude_float(df, columneName):
+    df = df.withColumn(columneName+'_STRIP_EXCLUDE_FLOAT', strip_UDF(df[columneName]))
+    df = df.drop(columneName).withColumnRenamed(columneName+"_STRIP_EXCLUDE_FLOAT", columneName)
+    return df
+
 # def for 30Features_construction_FOR_FIRST_TABLE
 # 對相關日期 做跨車輛的資訊計算 max min count range
 
@@ -985,7 +990,7 @@ def getCRCAMF_3year(spark):
                                                                                                            "srwhmf").load()
     df_CRCAMF_3year.createOrReplaceTempView("SRWHMF")
 
-    df_CRCAMF_3year = spark.sql(u"""select a.*, b.LRDT from .CRCAMF a, SRWHMF b
+    df_CRCAMF_3year = spark.sql(u"""select a.*, b.LRDT from CRCAMF a, SRWHMF b
           WHERE  (a.FRAN in ('L','T') or  
           upper(a.CARNM) like '%TOYOTA%' or  
           upper(a.CARNM) like '%CORONA%' or  
@@ -1013,8 +1018,7 @@ def getCRCAMF_3year(spark):
           upper(a.CARNM) like '%ES350%' or  
           upper(a.CARNM) like '%TERCEL%') 
           and upper(a.CARNM) not like '%DYNA%' and upper(a.CARNM) not like '%HINO%'
-          and a.LICSNO = b.LICSNO and b.LRDT > '2014-11-01'
-          """)
+          and a.LICSNO = b.LICSNO and b.LRDT > '2014-11-01'""")
     return df_CRCAMF_3year
 
 def getWeb_query_filter(spark):
@@ -1029,7 +1033,7 @@ def getWeb_query_filter(spark):
 def getCRAURF(spark):
     df_CRAURF = spark.read.format("org.apache.spark.sql.cassandra").option("keyspace", "cdp").option("table", "craurf").load()
     df_CRAURF.createOrReplaceTempView("CRAURF")
-    df_CRAURF = spark.sql(u"""SELECT LICSNO, TARGET, CUSTID, FORCEID FROM cdp.CRAURF""")
+    df_CRAURF = spark.sql(u"""SELECT LICSNO, TARGET, CUSTID, FORCEID FROM CRAURF""")
     return df_CRAURF
 
 # SRMINVO 發票金額分析   BY VIN   因為歷史資料或15年以上車輛 在發票上沒有登記 車號

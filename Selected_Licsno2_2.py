@@ -5,8 +5,7 @@ from pyspark.sql.window import Window
 from Constant import *
 from SparkUDF import *
 
-def selected_licsno_code2_2(spark, Log_File):
-
+def selected_licsno_code2_2(spark):
 
     df_CRCAMF = spark.read.option('header', 'true').csv(Temp_Path + "df_CRCAMF_union.csv")
     # 找出 最近三年內有回廠的15年以上車
@@ -14,23 +13,17 @@ def selected_licsno_code2_2(spark, Log_File):
     write_Log(Log_File, "13. %s | Look out the repaired cars over 15 years old in the past 3 years......" % str(
         datetime.datetime.now()))
     df_CRCAMF_3year = getCRCAMF_3year(spark)
+    df_CRCAMF_3year = getCRCAMF_filter(spark, df_CRCAMF_3year)
+
     write_Log(Log_File, "ok\n")
 
     write_Log(Log_File, "14. %s | Remove unused data......" % str(datetime.datetime.now()))
-
-    remove_LICSNO_list = None
 
     # 去除車輛狀態不是為 更改為 不得為 2過戶3失竊5報廢'
     df_CRCAMF_3year = df_CRCAMF_3year.filter(
         (df_CRCAMF_3year.STSCD != '2') & (df_CRCAMF_3year.STSCD != '3') & (df_CRCAMF_3year.STSCD != '5'))
 
-    # 扣除車牌"所有"已在網站上查詢到, 後續會加回最近報廢的'
-    '''
-    df_web_query = spark.read.option('header', 'true').csv(Import_Data_Path + "df_web_query_fix.csv")
-    df_web_query = strip_string(df_web_query, 'LICSNO')
-    df_web_query = upper_string(df_web_query, 'LICSNO')
-    df_web_query = df_web_query.withColumn('CARDATE_fix', transDatetime_UDF(array('CARDATE', lit(DATETIME_FORMAT2))))
-    '''
+    # 扣除車牌"所有"已在網站上查詢到, 後續會加回最近報廢的
     df_web_query = getWeb_query_filter(spark)
     # 指定時間之前的才清除 避免網站查詢不同步
     df_web_query = df_web_query.where(
@@ -49,8 +42,7 @@ def selected_licsno_code2_2(spark, Log_File):
     df_stolen = strip_string(df_stolen, 'LICSNO')
     df_stolen = upper_string(df_stolen, 'LICSNO')
     df_stolen = df_stolen.filter(df_stolen['result'] != u'查無資料')
-    df_CRCAMF_3year = df_CRCAMF_3year.join(df_stolen, df_CRCAMF_3year.LICSNO == df_stolen.LICSNO,
-                                               "leftanti")
+    df_CRCAMF_3year = df_CRCAMF_3year.repartition("LICSNO").join(df_stolen.repartition("LICSNO"), "LICSNO", "leftanti").persist(StorageLevel.DISK_ONLY)
     write_Log(Log_File, "ok\n")
 
     df_CRCAMF_3year = df_CRCAMF_3year.select("LICSNO", "CARNM", "CARMDL", "BDNO", "EGNO", "VIN")
@@ -61,28 +53,27 @@ def selected_licsno_code2_2(spark, Log_File):
     # print ' 再加上三年內有回廠 車齡15年以上的車輛 '
     df_CRCAMF = df_CRCAMF.union(df_CRCAMF_3year)
     df_CRCAMF = strip_string(df_CRCAMF, 'LICSNO')
-    df_CRCAMF = df_CRCAMF.dropDuplicates('LICSNO')
+    df_CRCAMF = df_CRCAMF.dropDuplicates(['LICSNO'])
     df_CRCAMF.write.option('header', 'true').csv(Temp_Path + "df_CRCAMF.csv")
-
     df_CRAURF = getCRAURF(spark)
 
     # 資料清整
-    df_CRCAMF = df_CRCAMF.withColumn("qualified", '1') # df.loc[rows, col] = 'value'
+    #df_CRCAMF = df_CRCAMF.withColumn("qualified", lit('1'))
 
     # 清除前後空白
     df_CRCAMF = strip_string(df_CRCAMF, 'LICSNO')
-    df_CRCAMF = df_CRCAMF.dropDuplicates('LICSNO')
+    df_CRCAMF = df_CRCAMF.dropDuplicates(['LICSNO'])
     df_CRAURF = strip_string(df_CRAURF, 'LICSNO')
     # df_CRAURF 五種人 所以本來就會重複
 
-    df_CRAURF = df_CRAURF.filter(df_CRAURF['LICSNO']!='')
+    df_CRAURF = df_CRAURF.filter(df_CRAURF['LICSNO'] != '')
     # matching for LICSNO with qualified car for all people
     # 找出符合條件的車輛下的所有人
     # df_CRCAMF 這邊LICSNO 尚未清整 因此 MERGE後 會變多
     # 已經DROP DUPLICATES
-    df_CRAURF = df_CRAURF.join(df_CRCAMF.select("LICSNO", "qualified"), "LICSNO", "left").persist(StorageLevel.DISK_ONLY)
+    df_CRAURF = df_CRAURF.repartition("LICSNO").join(df_CRCAMF.select("LICSNO").repartition("LICSNO"), "LICSNO", "inner").persist(StorageLevel.DISK_ONLY)
     # print '留下qualified')
-    df_CRAURF = df_CRAURF.filter(df_CRAURF['qualified']=='1').select("CUSTID", "qualified")
+    #df_CRAURF = df_CRAURF.filter(df_CRAURF['qualified']=='1').select("CUSTID", "qualified")
 
     # print '清掉前後空白'
     df_CRAURF = df_CRAURF.filter(df_CRAURF['CUSTID'].isNotNull())
@@ -92,7 +83,7 @@ def selected_licsno_code2_2(spark, Log_File):
     df_CRAURF = df_CRAURF.filter(df_CRAURF['CUSTID'] != '')
 
     # print '身分證一樣的清掉'
-    df_CRAURF = df_CRAURF.dropDuplicates("CUSTID")
+    df_CRAURF = df_CRAURF.dropDuplicates(["CUSTID"])
 
     # RE-DOWNLOAD df_CRAURF FOR MATCHING CUSTID
     # 再由找到的所有人 去找出所有車輛
@@ -105,8 +96,8 @@ def selected_licsno_code2_2(spark, Log_File):
     df_CRAURF = strip_string(df_CRAURF, 'CUSTID')
     df_CRAURF_all = df_CRAURF_all.filter(df_CRAURF_all['CUSTID']!='')
     df_CRAURF = df_CRAURF.filter(df_CRAURF['CUSTID'] != '')
-    df_CRAURF_all = df_CRAURF_all.join(df_CRAURF, "CUSTID", "left").persist(StorageLevel.DISK_ONLY)
+    df_CRAURF_all = df_CRAURF_all.join(df_CRAURF.select("CUSTID"), "CUSTID", "inner").persist(StorageLevel.DISK_ONLY)
     df_CRAURF_all = strip_string(df_CRAURF_all, 'LICSNO') #車牌清掉空白後 會有一筆重複車牌
-    df_CRAURF_all.filter(df_CRAURF_all.qualified == '1').dropDuplicates("LICSNO").write.option('header', 'true').csv(Temp_Path + "df_CRAUR.csv")
+    df_CRAURF_all.dropDuplicates(["LICSNO"]).write.option('header', 'true').csv(Temp_Path + "df_CRAUR.csv")
     del df_CRAURF_all
     write_Log(Log_File, "ok\n")

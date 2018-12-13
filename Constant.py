@@ -6,10 +6,10 @@ today = datetime.datetime.now()
 Path_by_day = today.strftime("%Y%m")
 Candidate_Car_age = 15  # 用來挑選候選車子的車齡參數
 #login_info = r'DRIVER={Simba Spark ODBC Driver}; SERVER=10.201.2.130; DATABASE=cdp;'  # 連Cassandra DBC
-Log_Path = './Log/'
-Log_File = Log_Path + 'Log_' + Path_by_day + '.txt'  # refactory by HD
-Result_Path = './' + Path_by_day + '/'  # refactory by HD
 Package_Path = os.path.dirname(os.path.realpath(__file__))
+Log_Path = Package_Path + '/Log/'
+Log_File = Log_Path + 'Log_' + Path_by_day + '.txt'  # refactory by HD
+Result_Path = Package_Path + '/' + Path_by_day + '/'  # refactory by HD
 File_Path = '' + Package_Path
 Import_Data_Path = File_Path + '/Import_Data/'
 Temp_Path = File_Path + '/Temp_Data/'
