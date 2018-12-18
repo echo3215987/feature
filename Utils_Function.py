@@ -59,8 +59,8 @@ def upper_string(df, columneName):
     return df
 
 def series_str_cleaner(inpurt_series, columnName):
-    inpurt_series = inpurt_series.na.fill({columnName: ' '})
-    inpurt_series = inpurt_series.withColumn(columnName + '_temp', regexp_replace(columnName, '[^0-9a-zA-Z]+', ''))
+    inpurt_series = inpurt_series.na.fill({columnName: ''})
+    inpurt_series = inpurt_series.withColumn(columnName + '_temp', upper(regexp_replace(strip_UDF(columnName), '[^0-9a-zA-Z]+', '')))
     inpurt_series = inpurt_series.drop(columnName).withColumnRenamed(columnName + '_temp', columnName)
     return inpurt_series
 '''
@@ -1026,7 +1026,7 @@ def getWeb_query_filter(spark):
     df_web_query = strip_string(df_web_query, 'LICSNO')
     df_web_query = upper_string(df_web_query, 'LICSNO')
     df_web_query = df_web_query.withColumn('LICSNO_upper', upper(trim(col("LICSNO"))))
-    df_web_query = df_web_query.withColumn('CARDATE_fix', transDatetime_UDF(array('CARDATE', lit(DATETIME_FORMAT2))))
+    df_web_query = df_web_query.withColumn('CARDATE_fix', transDatetime_UDF(array('CARDATE_fix', lit(DATETIME_FORMAT3))))
     return df_web_query
 
 # get CRAURF data
@@ -1035,6 +1035,21 @@ def getCRAURF(spark):
     df_CRAURF.createOrReplaceTempView("CRAURF")
     df_CRAURF = spark.sql(u"""SELECT LICSNO, TARGET, CUSTID, FORCEID FROM CRAURF""")
     return df_CRAURF
+
+def getPSLTAXORDMF(spark):
+    df_PSLTAXORDMF = spark.read.format("org.apache.spark.sql.cassandra").option("keyspace", "cdp").option("table",
+                                                                                                     "psltaxordmf").load()
+    df_PSLTAXORDMF.createOrReplaceTempView("PSLTAXORDMF")
+    df_PSLTAXORDMF = spark.sql(u"""SELECT * FROM PSLTAXORDMF WHERE OBRAND like '%TOYOTA%' 
+    or OBRAND like '%LEXUS%'
+    or OBRAND like '%AMCTOYOTA%' 
+    or OBRAND like '%TOYOYA%' 
+    or OBRAND like '%豐田%' 
+    or OBRAND like '%YOYOTA%' 
+    or OBRAND like '%國%' 
+    or OBRAND like '%T0YOTA%' 
+    or OBRAND like '%TOYATA%'""")
+    return df_PSLTAXORDMF
 
 # SRMINVO 發票金額分析   BY VIN   因為歷史資料或15年以上車輛 在發票上沒有登記 車號
 # def getSRMINVO_query_data(query_colNM):

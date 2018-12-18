@@ -17,10 +17,6 @@ fillna_Float_UDF = udf(lambda value: 0.0 if value is None else value, FloatType(
 transDatetime_UDF = udf(lambda arr: arr[0] if (isinstance(arr[0], float) or arr[0] is None) else datetime.datetime.strptime(arr[0].replace(' ', ''), arr[1]),
                     TimestampType())
 
-# 將欄位值 EXSIOR, PREMIO, ALTIS 取代成CORONA
-replaceValue_UDF = udf(
-    lambda value: 'CORONA' if (value == 'EXSIOR' or value == 'PREMIO' or value == 'ALTIS') else value, StringType())
-
 # 將兩個欄位比對, 後者(arr[1])包含前者(arr[0]) 回傳 arr[0] = '', 否則回傳前者原本的值
 existValueReplacement_UDF = udf(lambda arr: arr[0] if arr[0] not in arr[1] else '', StringType())
 

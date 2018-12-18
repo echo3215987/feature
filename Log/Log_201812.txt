@@ -329,3 +329,146 @@ ok
 10. 2018-12-12 16:24:55.358800 | Clean df_SSHSCHISTORY .......ok
 11. 2018-12-12 16:24:56.208800 | Clearn df_CRCAMF......ok
 12. 2018-12-12 16:27:20.651800 | Clearn df_SSHUCHISTORY......ok
+
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:01:43.882202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:01:43.889202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:07:18.729202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:07:18.735202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:18:12.662202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:18:12.667202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:27:10.336202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:27:10.341202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:28:07.455202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:28:07.460202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:35:52.133202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:35:52.139202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:38:54.501202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:38:54.506202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:41:45.321202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:41:45.325202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:45:32.206202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:45:32.212202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 10:46:14.666202
+    END_DATE of data is 2018-12-01
+15. 2018-12-13 10:46:14.671202 | Combine data......
+01. Initial folder process......OK
+    Start time is 2018-12-13 11:10:56.260202
+    END_DATE of data is 2018-12-01
+02. 2018-12-13 11:10:56.265202 | Select data from cdp.CRCAMF......ok
+03. 2018-12-13 11:10:58.490202 | Clean the df_CRCAMF......
+01. Initial folder process......OK
+    Start time is 2018-12-13 11:12:06.270202
+    END_DATE of data is 2018-12-01
+02. 2018-12-13 11:12:06.275202 | Select data from cdp.CRCAMF......ok
+03. 2018-12-13 11:12:08.745202 | Clean the df_CRCAMF......ok
+04. 2018-12-13 11:12:23.138202 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-13 11:12:23.363202 | Clean the df_SSHSCHISTORY......ok
+
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:18:33.074202
+    END_DATE of data is 2018-12-01
+06. 2018-12-13 16:18:33.079202 | HT's cars selection......ok
+07. 2018-12-13 16:18:37.708202 | Remove scrapped car from web query......ok
+08. 2018-12-13 16:18:37.905202 | Remove stolen cars......ok
+09. 2018-12-13 16:18:40.041202 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-13 16:18:41.867202 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-13 16:18:42.692202 | Clearn df_CRCAMF......
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:22:29.128202
+    END_DATE of data is 2018-12-01
+06. 2018-12-13 16:22:29.132202 | HT's cars selection......ok
+07. 2018-12-13 16:22:33.851202 | Remove scrapped car from web query......ok
+08. 2018-12-13 16:22:34.104202 | Remove stolen cars......ok
+09. 2018-12-13 16:22:36.280202 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-13 16:22:38.078202 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-13 16:22:38.953202 | Clearn df_CRCAMF......
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:23:17.683202
+    END_DATE of data is 2018-12-01
+06. 2018-12-13 16:23:17.688202 | HT's cars selection......ok
+07. 2018-12-13 16:23:22.226202 | Remove scrapped car from web query......ok
+08. 2018-12-13 16:23:22.440202 | Remove stolen cars......ok
+09. 2018-12-13 16:23:24.531202 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-13 16:23:26.352202 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-13 16:23:27.161202 | Clearn df_CRCAMF......
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:25:50.174202
+    END_DATE of data is 2018-12-01
+06. 2018-12-13 16:25:50.178202 | HT's cars selection......ok
+07. 2018-12-13 16:25:55.111202 | Remove scrapped car from web query......ok
+08. 2018-12-13 16:25:55.393202 | Remove stolen cars......
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:26:05.639202
+    END_DATE of data is 2018-12-01
+06. 2018-12-13 16:26:05.645202 | HT's cars selection......ok
+07. 2018-12-13 16:26:10.261202 | Remove scrapped car from web query......ok
+08. 2018-12-13 16:26:10.453202 | Remove stolen cars......ok
+09. 2018-12-13 16:26:12.717202 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-13 16:26:14.577202 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-13 16:26:15.368202 | Clearn df_CRCAMF......
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:26:35.036202
+    END_DATE of data is 2018-12-01
+06. 2018-12-13 16:26:35.037202 | HT's cars selection......ok
+07. 2018-12-13 16:26:39.671202 | Remove scrapped car from web query......ok
+08. 2018-12-13 16:26:39.888202 | Remove stolen cars......ok
+09. 2018-12-13 16:26:41.903202 | Compare with scrapped data from web query and df_SSHSCHISTORY......ok
+10. 2018-12-13 16:26:43.721202 | Clean df_SSHSCHISTORY .......ok
+11. 2018-12-13 16:26:44.511202 | Clearn df_CRCAMF......ok
+12. 2018-12-13 16:30:55.082202 | Clearn df_SSHUCHISTORY......
+01. Initial folder process......OK
+    Start time is 2018-12-13 16:34:43.445202
+    END_DATE of data is 2018-12-01
+12. 2018-12-13 16:34:49.132202 | Clearn df_SSHUCHISTORY......ok
+13. 2018-12-13 16:37:05.688202 | Look out the repaired cars over 15 years old in the past 3 years......ok
+14. 2018-12-13 16:37:06.539202 | Remove unused data......ok
+ok
+ok
+
+01. Initial folder process......OK
+    Start time is 2018-12-14 15:19:39.838001
+    END_DATE of data is 2018-12-01
+02. 2018-12-14 15:19:39.843001 | Select data from cdp.CRCAMF......ok
+03. 2018-12-14 15:19:44.973001 | Clean the df_CRCAMF......ok
+04. 2018-12-14 15:20:01.533001 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-14 15:20:01.752001 | Clean the df_SSHSCHISTORY......ok
+
+01. Initial folder process......OK
+    Start time is 2018-12-14 15:59:28.486001
+    END_DATE of data is 2018-12-01
+02. 2018-12-14 15:59:28.493001 | Select data from cdp.CRCAMF......ok
+03. 2018-12-14 15:59:30.702001 | Clean the df_CRCAMF......ok
+04. 2018-12-14 15:59:47.822001 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-14 15:59:48.046001 | Clean the df_SSHSCHISTORY......ok
+
+01. Initial folder process......OK
+    Start time is 2018-12-17 15:41:40.137000
+    END_DATE of data is 2018-12-01
+02. 2018-12-17 15:41:40.142000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-17 15:41:43.076000 | Clean the df_CRCAMF......
+01. Initial folder process......OK
+    Start time is 2018-12-17 15:42:39.503000
+    END_DATE of data is 2018-12-01
+02. 2018-12-17 15:42:39.507000 | Select data from cdp.CRCAMF......ok
+03. 2018-12-17 15:42:41.705000 | Clean the df_CRCAMF......ok
+04. 2018-12-17 15:42:53.872000 | Select data from cdp.SSHSCHISTORY......ok
+05. 2018-12-17 15:42:54.117000 | Clean the df_SSHSCHISTORY......ok

@@ -4,6 +4,7 @@ from pyspark.sql.functions import *
 from pyspark.storagelevel import *
 from Constant import *
 from SparkUDF import *
+import sys
 
 def selected_licsno_code1(spark):
 
@@ -29,22 +30,24 @@ def selected_licsno_code1(spark):
     df_web_query = df_web_query.where(
         (df_web_query['CARDATE_fix'] >= datetime.datetime(2015, 7, 8, 0, 0, 0, 0)) &
         (df_web_query['CARDATE_fix'] <= datetime.datetime.strptime(END_DATE, "%Y-%m-%d"))).repartition("LICSNO_upper")
-    df_CRCAMF = df_CRCAMF.join(df_web_query[['LICSNO_upper', 'STATUS']], "LICSNO_upper", 'left').persist(StorageLevel.DISK_ONLY)
 
+    df_CRCAMF = df_CRCAMF.join(df_web_query[['LICSNO_upper', 'STATUS']], "LICSNO_upper", 'left').persist(StorageLevel.DISK_ONLY)
     df_CRCAMF = df_CRCAMF.drop("LICSNO_upper")
     df_CRCAMF_web_query20150708 = df_CRCAMF.filter(df_CRCAMF.STATUS == '已回收')
+
     # print ('撈出', df_CRCAMF_web_query20150708.shape[0])
     df_CRCAMF_web_query20150708 = df_CRCAMF_web_query20150708.select('LICSNO', 'CARNM', 'CARMDL', 'BDNO', 'EGNO', 'VIN')
     # print (df_CRCAMF_web_query20150708.shape)
 
-    df_CRCAMF = df_CRCAMF.where((df_CRCAMF['STATUS'] != '已回收') | (col("STATUS").isNull())) # 這裡是扣除已回收的車籍資料
+    df_CRCAMF = df_CRCAMF.where((df_CRCAMF['STATUS'] != '已回收') | (df_CRCAMF.STATUS.isNull())) # 這裡是扣除已回收的車籍資料
     # print ('剩下', df_CRCAMF.shape)
     # print u'5. 去CARNM出現次數過少者 這邊不去除過少 由報廢去篩選出來'
     df_CRCAMF = strip_string(df_CRCAMF, 'CARNM')
 
-    #將EXSIOR, PREMIO, ALTIS取代成CORONA
-    #dict_replacce_CARNM = {'EXSIOR': 'CORONA', 'PREMIO': 'CORONA', 'ALTIS': 'COROLLA'}
-    df_CRCAMF = df_CRCAMF.withColumn('CARNM_M', replaceValue_UDF(col("CARNM")))
+    # 將欄位值 EXSIOR, PREMIO取代成CORONA,  ALTIS 取代成COROLLA
+    df_CRCAMF = df_CRCAMF.withColumn('CARNM_M', col("CARNM"))
+    df_CRCAMF = df_CRCAMF.na.replace(['EXSIOR', 'PREMIO', 'ALTIS'], ['CORONA', 'CORONA', 'COROLLA'], 'CARNM_M')
+
 
     df_CRCAMF = series_str_cleaner(df_CRCAMF, 'BDNO')
     df_CRCAMF = series_str_cleaner(df_CRCAMF, 'EGNO')
@@ -71,6 +74,7 @@ def selected_licsno_code1(spark):
     #ISSUE_fix 大於 1988/1/1號 且 ISSUE_fix 小於等於 15年前當月的1號
     df_SSHSCHISTORY = df_SSHSCHISTORY.where((df_SSHSCHISTORY.ISSUE_fix <= datetime.datetime(today.year - Candidate_Car_age, today.month,
         1, 0, 0, 0, 0)) & (df_SSHSCHISTORY.ISSUE_fix >= datetime.datetime(1988, 1, 1, 0, 0, 0, 0)))
+
     # print ("2015 0708之後報廢的車輛 需要找回")
     df_SSHSCHISTORY = df_SSHSCHISTORY.withColumn('MODDT_fix', transDatetime_UDF(array('MODDT', lit(DATETIME_FORMAT1))))
 
@@ -86,8 +90,6 @@ def selected_licsno_code1(spark):
     df_SSHSCHISTORY = exist_value_replacement(df_SSHSCHISTORY, 'EGNOM', 'ENGINENO')
     df_SSHSCHISTORY = exist_value_replacement(df_SSHSCHISTORY, 'BDNOM', 'BODYNO')
 
-    df_SSHSCHISTORY = df_SSHSCHISTORY.withColumn("is_scrapped", lit(1))
-
     # print (u'6. 扣除車牌 7/8之前 已在網站上查詢到   已由車牌進行排除')
     # EGNO取倒數9位
     df_web_query = series_str_cleaner(df_web_query, 'EGNO')
@@ -101,6 +103,8 @@ def selected_licsno_code1(spark):
     # 去除ENGINENO_temp有在remove_LICSNO_list清單裡的名單
     df_SSHSCHISTORY = df_SSHSCHISTORY.repartition("ENGINENO_temp").join(remove_LICSNO_list, df_SSHSCHISTORY.ENGINENO_temp == remove_LICSNO_list.EGNO,
                                            "leftanti").persist(StorageLevel.DISK_ONLY)
+
+    df_SSHSCHISTORY = df_SSHSCHISTORY.withColumn("is_scrapped", lit(1))
 
     # 用車身號碼 引擎號碼 後面10碼來比對 CRCAMF
     df_SSHSCHISTORY = substr_last_char(df_SSHSCHISTORY, 'ENGINENO', 10)
@@ -127,9 +131,8 @@ def selected_licsno_code1(spark):
             # print (indexHIST, indexCRCAMF)
             merged = None
             merged = df_CRCAMF.repartition(indexCRCAMF, "CARNM_M") \
-                .join(df_SSHSCHISTORY.where(df_SSHSCHISTORY[indexHIST] != '')
-                      .select(indexHIST, 'GRPNM', 'is_scrapped').dropDuplicates([indexHIST]).repartition(indexHIST,
-                                                                                                         "GRPNM"),
+                .join(df_SSHSCHISTORY.where((df_SSHSCHISTORY[indexHIST] != '') | (df_SSHSCHISTORY[indexHIST].isNull()))
+                      .select(indexHIST, 'GRPNM', 'is_scrapped').dropDuplicates([indexHIST]).repartition(indexHIST,"GRPNM"),
                       (df_CRCAMF['CARNM_M'] == df_SSHSCHISTORY['GRPNM']) & (
                               df_CRCAMF[indexCRCAMF] == df_SSHSCHISTORY[indexHIST]), "left").persist(
                 StorageLevel.DISK_ONLY)
@@ -138,7 +141,6 @@ def selected_licsno_code1(spark):
                 df_result_csv = merged
             else:
                 df_result_csv = df_result_csv.union(merged)
-
     # 加回已知在20150708報廢的車輛 網站上查詢到 在crcamf比對到的 from  0001_web_query_minipulation.ipynb
     # 留下 BDNO_BODYNO 與 BDNO_BDNOM 是1的資料
     df_result_csv = df_result_csv.filter(df_result_csv.is_scrapped_temp == 1) \

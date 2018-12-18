@@ -22,8 +22,9 @@ def main():
 
     df = spark.read.option('header', 'true').csv("C:/Users/foxconn/Desktop/tt.csv")
     #df.selectExpr("substring(INSURCD, -10, 10)").show()
-    df.withColumn('INSURCD_STRING', col('INSURCD').substr(-10, 10)).show()
-
+    #df.withColumn('INSURCD_STRING', col('INSURCD').substr(-10, 10)).show()
+    df = df.na.replace(['t1', 't2', 't3'], ['A', 'A', 'C'], 'tt')
+    df.show()
     '''
     df = df.withColumn('INSURCD_TRIM', trim(df.INSURCD))
     df.where((df.INSURCD_TRIM != '') | (col("INSURCD_TRIM").isNull())).show()

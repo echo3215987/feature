@@ -25,68 +25,59 @@ def selected_licsno_code3(spark):
 
     # 清除空白車牌
     df_CRAURF_select_LICSNO = df_CRAURF_select_LICSNO.filter(df_CRAURF_select_LICSNO['LICSNO'] != '')  # 刪除 LICSNO=''的資料
-    df_CRAURF_select_LICSNO = df_CRAURF_select_LICSNO.filter(df_CRAURF_select_LICSNO['LICSNO'].notnull())  # 刪除LICSNO= NULL的資料
+    df_CRAURF_select_LICSNO = df_CRAURF_select_LICSNO.filter(df_CRAURF_select_LICSNO['LICSNO'].isNotNull())  # 刪除LICSNO= NULL的資料
 
-    '''
     # 將符合條件者 與 其名下所有車輛 合併
     # CRCAMF：車輛基本資料檔，以車為主，紀錄車子的相關資訊，包含保險、是否為二手車等，不含車主資訊
     # CRAURF：車輛顧客關聯檔，以車為主，紀錄與車子有關的人，包含領照人、使用人、聯絡人、發票人、服務聯絡人，一車對多人
-    df_CRCAMF.loc[:, 'qualified'] = '1'
-    df_CRAURF_select_LICSNO.loc[:, 'qualified'] = '0'
+    df_CRCAMF = df_CRCAMF.withColumn("qualified", lit('1'))
+    df_CRAURF_select_LICSNO = df_CRAURF_select_LICSNO.withColumn("qualified", lit('0'))
 
     # CRCAMF 裡的 qualified全為1，CRAURF 裡面的 qualified全為 0，下面把 2 個 df 合併起來，資料筆數等於兩個 df 相加
-    df_combined = pd.DataFrame()
-    df_combined = df_CRCAMF[['LICSNO', 'qualified']].append(df_CRAURF_select_LICSNO[['LICSNO', 'qualified']],
-                                                            ignore_index=True)
+    df_combined = df_CRCAMF.select('LICSNO', 'qualified').union(df_CRAURF_select_LICSNO.select('LICSNO', 'qualified'))
 
-    df_combined = df_combined.drop_duplicates('LICSNO', keep='first')  # 這邊清除 重複車牌
-    df_combined = df_combined.reset_index(drop=True)
+    df_combined = df_combined.dropDuplicates(['LICSNO']) # 這邊清除 重複車牌
 
     # 申請汰舊換新相關資料整理 前處理
     # 用以標示 那些車輛有進行汰舊換新
     # 這邊目前沒有另外篩選出 原本身分證是否已在客戶主檔 或 車牌與身分證 需有關連
     # 採用 原先crcamf過濾 汰舊與過戶篩選後 (讓它自然流過篩選) 再來標示   而不是 直接加汰舊換新者加入
-    conn = pyodbc.connect(DSN="Simba Spark ODBC Driver", autocommit=True, unicode_results=True)
-    df_PSLTAXORDMF = pd.read_sql(
-        u"SELECT * FROM cdp.PSLTAXORDMF WHERE OBRAND like '%TOYOTA%' or OBRAND like '%LEXUS%' or OBRAND like '%AMCTOYOTA%' or OBRAND like '%TOYOYA%' or OBRAND like '%豐田%' or OBRAND like '%YOYOTA%' or OBRAND like '%國%' or OBRAND like '%T0YOTA%' or OBRAND like '%TOYATA%'",
-        conn)
-    conn.close()
 
+    df_PSLTAXORDMF = getPSLTAXORDMF(spark)
     # DELDT不能有日期 表示沒有被退件 資料內容要是1900-01-01
-    df_PSLTAXORDMF = df_PSLTAXORDMF[df_PSLTAXORDMF[u'DELDT'] < datetime.datetime(2010, 1, 1, 0, 0, 0, 0)]
-    df_PSLTAXORDMF['OLICSNO'] = df_PSLTAXORDMF['OLICSNO'].map(lambda x: x.strip())
-    df_PSLTAXORDMF = df_PSLTAXORDMF[df_PSLTAXORDMF['OLICSNO'] != '']
-    df_PSLTAXORDMF.loc[:, 'PSLTAX'] = '1'
+    df_PSLTAXORDMF = df_PSLTAXORDMF.filter(df_PSLTAXORDMF['DELDT'] < datetime.datetime(2010, 1, 1, 0, 0, 0, 0))
+    df_PSLTAXORDMF = strip_string(df_PSLTAXORDMF, 'OLICSNO')
+    df_PSLTAXORDMF = df_PSLTAXORDMF.filter(df_PSLTAXORDMF['OLICSNO'] != '')
+    df_PSLTAXORDMF = df_PSLTAXORDMF.withColumn("PSLTAX", lit('1'))
 
-    df_PSLTAXORDMF['OLICSNO'].replace(
-        {'HU3767': 'HU-3767',
-         'LE4622': 'LE-4622',
-         'RB9528': 'RB-9528',
-         'GV5751': 'GV-5751',
-         'H31026': 'H3-1026',
-         'CU8227': 'CU-8227',
-         'FE2052': 'FE-2052',
-         'KD8468': 'KD-8468'}, inplace=True)
+    # 特定舊車牌轉換
+    df_PSLTAXORDMF = df_PSLTAXORDMF.replace(['HU3767', 'LE4622', 'RB9528', 'GV5751', 'H31026', 'CU8227', 'FE2052', 'KD8468'],
+                           ['HU-3767','LE-4622','RB-9528','GV-5751','H3-1026','CU-8227','FE-2052','KD-8468'], 'OLICSNO')
 
     # 在這之前的df_combined包含df_CRCAMF（qualified=1）跟df_CRAURF(qualified=0)的所有資料
     # df_PSLTAXORDMF包含所有和泰車已經報廢並申請貨物稅補助的資料（PSLTAXORDMF是貨物稅退稅案件檔）
     # 下面合併完之後，可以知道那些車輛已經申請貨物稅補助（PSLTAX=1的資料）
-    df_combined = df_combined.merge(df_PSLTAXORDMF[['OLICSNO', 'PSLTAX']], how='left', left_on='LICSNO',
-                                    right_on='OLICSNO')
-    df_combined = df_combined.drop('OLICSNO', 1)
-
+    df_combined = df_combined.repartition("LICSNO")\
+        .join(df_PSLTAXORDMF.select('OLICSNO', 'PSLTAX')
+              .repartition("OLICSNO"), df_combined.LICSNO == df_PSLTAXORDMF.OLICSNO, 'left')\
+        .persist(StorageLevel.DISK_ONLY)
+    df_combined = df_combined.drop('OLICSNO')
     # PSLTAX =1 表示有汰舊換新，空值的部分補 0
-    df_combined['PSLTAX'] = df_combined['PSLTAX'].fillna('0')
+    df_combined = df_combined.na.fill({'PSLTAX': '0'})
 
     # 沒有qualified=0而汰舊換新，    qualified=='0'是沒報廢，df_combined.PSLTAX=='1'是有申請貨物稅補助
-    temp_df_combined = df_combined[(df_combined.qualified == '0') & (df_combined.PSLTAX == '1')]
-    df_combined = df_combined[~df_combined['LICSNO'].isin(temp_df_combined['LICSNO'])]
+    temp_df_combined = df_combined.filter((df_combined.qualified == '0') & (df_combined.PSLTAX == '1'))
+    df_combined = df_combined.repartition("LICSNO")\
+        .join(temp_df_combined.select('LICSNO')
+              .repartition("LICSNO"), 'LICSNO', 'leftanti')\
+        .persist(StorageLevel.DISK_ONLY)
 
     # print '清除報廢後 再標示在20150708 之後報廢的車輛 '
-    df_scrapped_20150708 = pd.read_csv(Temp_Path + "df_CRCAMF_scrapped_after20150708.csv", sep=',', encoding='utf-8')
-    df_scrapped_20150708['LICSNO'] = df_scrapped_20150708['LICSNO'].map(
-        lambda x: x if (isinstance(x, float) or x is None) else x.strip())
-    df_scrapped_20150708['scrapped_150708'] = '1'
+    df_scrapped_20150708 = spark.read.option('header', 'true').csv(Temp_Path + "df_CRCAMF_scrapped_after20150708.csv")
+    df_scrapped_20150708 = strip_string_exclude_float(df_scrapped_20150708, 'LICSNO')
+    df_scrapped_20150708 = df_scrapped_20150708.withColumn('scrapped_150708', lit('1'))
+
+    '''    
     df_combined = df_combined.merge(df_scrapped_20150708[['LICSNO', 'scrapped_150708']], how='left', left_on='LICSNO',
                                     right_on='LICSNO')
     df_combined['scrapped_150708'] = df_combined['scrapped_150708'].fillna('0')

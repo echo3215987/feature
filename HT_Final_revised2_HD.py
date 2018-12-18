@@ -720,7 +720,7 @@ if __name__ == '__main__':
 
   # print ('撈出', df_CRCAMF_web_query20150708.shape[0])
   df_CRCAMF_web_query20150708 = df_CRCAMF_web_query20150708[[u'LICSNO', u'CARNM', u'CARMDL', u'BDNO', u'EGNO', u'VIN']]
-  # print (df_CRCAMF_web_query20150708.shape)
+  # print (df_CRCAMFEND_DATE_web_query20150708.shape)
 
   df_CRCAMF = df_CRCAMF[df_CRCAMF['STATUS']!=u'已回收'] # 這裡是扣除已回收的車籍資料
   # print ('剩下', df_CRCAMF.shape)
@@ -796,16 +796,12 @@ if __name__ == '__main__':
   list_HIST = ['BODYNO','BDNOM']
   list_CRCAMF = ['BDNO']
 
-  df_SSHSCHISTORY.to_csv(Temp_Path + "df_SSHSCHISTORY.csv", sep=',', encoding='utf-8')
-  df_CRCAMF.to_csv(Temp_Path + "df_CRCAMF.csv", sep=',', encoding='utf-8')
-  df_CRCAMF_web_query20150708.to_csv(Temp_Path + "df_CRCAMF_web_query20150708.csv", sep=',', encoding='utf-8')
-
   #交叉比對 也比對車名
   for indexHIST in list_HIST:
       for indexCRCAMF in list_CRCAMF:
   #         print (indexHIST, indexCRCAMF)
           merged = None
-          merged = df_CRCAMF[['BDNO', 'EGNO', 'VIN','CARNM_M']].merge(df_SSHSCHISTORY[df_SSHSCHISTORY[indexHIST]!='']                [[indexHIST,'GRPNM','is_scrapped']].drop_duplicates(indexHIST), how='left', left_on=[indexCRCAMF,'CARNM_M'] , right_on=[indexHIST,'GRPNM'])
+          merged = df_CRCAMF[['BDNO', 'EGNO', 'VIN','CARNM_M']].merge(df_SSHSCHISTORY[df_SSHSCHISTORY[indexHIST]!=''][[indexHIST,'GRPNM','is_scrapped']].drop_duplicates(indexHIST), how='left', left_on=[indexCRCAMF,'CARNM_M'] , right_on=[indexHIST,'GRPNM'])
           merged['is_scrapped'] =  merged['is_scrapped'].fillna('0')
           df_CRCAMF[indexCRCAMF+'_'+indexHIST] = merged['is_scrapped'].reset_index(drop=True)
 

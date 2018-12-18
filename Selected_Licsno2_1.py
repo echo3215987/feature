@@ -50,7 +50,8 @@ def selected_licsno_code2_1(spark):
     df_CRCAMF_NOTused = df_CRCAMF_NOTused.select("LICSNO", "CARNM", "CARMDL", "BDNO", "EGNO", "VIN", "UCDELIVIDT", "CARNM_M", "EGNO_6", "BDNO_6")
     for indexHIST in list_HIST:
         for indexCRCAMF in list_CRCAMF:
-            df_CRCAMF_NOTused = df_CRCAMF_NOTused.repartition(indexCRCAMF, "CARNM_M").join(df_SSHUCHISTORY.where(df_SSHUCHISTORY[indexHIST] != '')
+            df_CRCAMF_NOTused = df_CRCAMF_NOTused.repartition(indexCRCAMF, "CARNM_M")\
+                .join(df_SSHUCHISTORY.where((df_SSHUCHISTORY[indexHIST] != '') | (df_SSHUCHISTORY[indexHIST].isNull()))
                       .select(indexHIST, 'GRPNM').repartition(indexHIST, "GRPNM").dropDuplicates([indexHIST]),
                       (df_CRCAMF_NOTused['CARNM_M'] == df_SSHUCHISTORY['GRPNM']) & (
                               df_CRCAMF_NOTused[indexCRCAMF] == df_SSHUCHISTORY[indexHIST]), "leftanti").persist(StorageLevel.DISK_ONLY)
@@ -65,13 +66,13 @@ def selected_licsno_code2_1(spark):
 
     # 只選六碼時 限定 BD VS BD  , EG VS EG 避免 因為碼數較小誤判
     df_CRCAMF_NOTused = df_CRCAMF_NOTused.repartition("EGNO_6", "CARNM_M")\
-        .join(df_SSHUCHISTORY.filter(df_SSHUCHISTORY['ENGINENO_6'] != '').select("ENGINENO_6", "GRPNM")
+        .join(df_SSHUCHISTORY.filter((df_SSHUCHISTORY['ENGINENO_6'] != '') | (df_SSHUCHISTORY['ENGINENO_6'].isNull())).select("ENGINENO_6", "GRPNM")
         .dropDuplicates(["ENGINENO_6", "GRPNM"]).repartition("ENGINENO_6", "GRPNM"),
               (df_CRCAMF_NOTused['CARNM_M'] == df_SSHUCHISTORY['GRPNM']) & (
                       df_CRCAMF_NOTused['EGNO_6'] == df_SSHUCHISTORY['ENGINENO_6']), "leftanti").persist(StorageLevel.DISK_ONLY)
 
     df_CRCAMF_NOTused = df_CRCAMF_NOTused.repartition("BDNO_6", "CARNM_M")\
-        .join(df_SSHUCHISTORY.filter(df_SSHUCHISTORY['BODYNO_6'] != '').select("BODYNO_6", "GRPNM")
+        .join(df_SSHUCHISTORY.filter((df_SSHUCHISTORY['BODYNO_6'] != '') | (df_SSHUCHISTORY['BODYNO_6'].isNull())).select("BODYNO_6", "GRPNM")
         .dropDuplicates(["BODYNO_6", "GRPNM"]).repartition("BODYNO_6", "GRPNM"),
             (df_CRCAMF_NOTused['CARNM_M'] == df_SSHUCHISTORY['GRPNM']) & (
                 df_CRCAMF_NOTused['BDNO_6'] == df_SSHUCHISTORY['BODYNO_6']), "leftanti").persist(StorageLevel.DISK_ONLY)
